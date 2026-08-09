@@ -10,4 +10,4 @@ clean:
 	rm -f $(OUTS)
 
 $(OUTS):
-	$(MD2HTML) $(@:.html=.md) > $@
+	$(MD2HTML) $(MD2HTMLFLAGS) $(@:.html=.md) > $@
