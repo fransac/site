@@ -1,6 +1,6 @@
 include config.mk
 
-OUTS = src/index.html
+OUTS = index.html
 
 .PHONY: all clean
 
