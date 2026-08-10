@@ -25,6 +25,6 @@ uninstall:
 	done
 
 $(OUTS):
-	cat header.html > $@
+	sed "s|@TITLE@|$$(head -n 1 $(@:.html=.md))|" header.html > $@
 	$(MD2HTML) $(MD2HTMLFLAGS) $(@:.html=.md) >> $@
 	cat footer.html >> $@
