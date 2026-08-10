@@ -2,6 +2,8 @@ include config.mk
 
 OUTS = index.html
 
+PUBLICOUTS =
+
 .PHONY: all clean install uninstall
 
 all: $(OUTS)
@@ -10,16 +12,16 @@ clean:
 	rm -f $(OUTS)
 
 install: all
-	for o in $(OUTS); \
+	for o in $(OUTS) $(PUBLICOUTS); \
 	do \
 		mkdir -p $$(dirname "$(DESTDIR)$(ROOT)/$$o"); \
-		cp -f "$$o" "$(DESTDIR)$(ROOT)/$$o"; \
+		cp -rf "$$o" "$(DESTDIR)$(ROOT)/$$o"; \
 	done
 
 uninstall:
-	for o in $(OUTS); \
+	for o in $(OUTS) $(PUBLICOUTS); \
 	do \
-		rm -f "$(DESTDIR)$(ROOT)/$$o"; \
+		rm -rf "$(DESTDIR)$(ROOT)/$$o"; \
 	done
 
 $(OUTS):
