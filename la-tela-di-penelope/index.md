@@ -1,8 +1,6 @@
 La tela di Penelope
 ===================
 
-[Go back](..)
-
 - [Eco](./music/eco.flac)
 - [Eredità](./music/eredita.flac)
 - [Nessuno](./music/nessuno.flac)
