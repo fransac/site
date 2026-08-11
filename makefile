@@ -1,8 +1,9 @@
 include config.mk
 
-OUTS = index.html
+OUTS = index.html \
+       la-tela-di-penelope/index.html \
 
-PUBLICOUTS =
+PUBLICOUTS = la-tela-di-penelope/music \
 
 .PHONY: all clean install uninstall
 
