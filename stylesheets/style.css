@@ -66,6 +66,14 @@ pre
 	padding-left: 1em;
 }
 
+pre::before
+{
+	content: "CODE";
+	display: block;
+	padding-bottom: 1em;
+	opacity: 0.5;
+}
+
 hr
 {
 	border: none;
