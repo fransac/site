@@ -1,5 +1,7 @@
 include config.mk
 
+SRC = src
+
 OUTS = index.html \
        la-tela-di-penelope/index.html \
 
@@ -12,13 +14,16 @@ PUBLICOUTS = fonts \
 all: $(OUTS)
 
 clean:
-	rm -f $(OUTS)
+	for o in $(OUTS); \
+	do \
+		rm -f "$(SRC)/$$o"; \
+	done
 
 install: all
 	for o in $(OUTS) $(PUBLICOUTS); \
 	do \
 		mkdir -p $$(dirname "$(DESTDIR)$(ROOT)/$$o"); \
-		cp -rf "$$o" "$(DESTDIR)$(ROOT)/$$o"; \
+		cp -rf "$(SRC)/$$o" "$(DESTDIR)$(ROOT)/$$o"; \
 	done
 
 uninstall:
@@ -28,6 +33,6 @@ uninstall:
 	done
 
 $(OUTS):
-	cat template/header.html > $@
-	$(MD2HTML) $(MD2HTMLFLAGS) $(@:.html=.md) >> $@
-	cat template/footer.html >> $@
+	cat template/header.html > $(SRC)/$@
+	$(MD2HTML) $(MD2HTMLFLAGS) $(SRC)/$(@:.html=.md) >> $(SRC)/$@
+	cat template/footer.html >> $(SRC)/$@
