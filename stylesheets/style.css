@@ -104,3 +104,15 @@ img
 	height: 0.7em;
 	width: auto;
 }
+
+blockquote,
+pre
+{
+	border-left: solid 1px;
+	margin: 0 1em;
+	padding: 0.5em 1em;
+}
+
+blockquote {
+	font-style: italic;
+}
