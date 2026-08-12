@@ -30,6 +30,41 @@ body
 	margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+	margin: 2em 0;
+}
+
+h1
+{
+	text-align: center;
+}
+
+h2::before
+{
+	content: "*";
+	padding-right: 1em;
+}
+
+blockquote,
+p,
+pre
+{
+	margin-bottom: 1em;
+}
+
+blockquote,
+pre
+{
+	border-left: solid 0.25em;
+	padding-left: 1em;
+}
+
 hr
 {
 	border: none;
@@ -68,14 +103,6 @@ img
 {
 	height: 0.7em;
 	width: auto;
-}
-
-blockquote,
-pre
-{
-	border-left: solid 1px;
-	margin: 0 1em;
-	padding: 0.5em 1em;
 }
 
 blockquote {
