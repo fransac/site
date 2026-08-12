@@ -23,3 +23,84 @@ body
 	overflow-wrap: break-word;
 	padding: 0 2em;
 }
+
+h1,
+h2,
+hr,
+p,
+blockquote,
+ol,
+pre,
+ul
+{
+	margin: 0;
+}
+
+h1:not(:first-child),
+h2:not(:first-child),
+hr:not(:first-child),
+p:not(:first-child),
+blockquote:not(:first-child),
+ol:not(:first-child),
+pre:not(:first-child),
+ul:not(:first-child)
+{
+	margin-top: 2rem;
+}
+
+h1,
+h2
+{
+	font-weight: bold;
+	position: relative;
+	text-align: center;
+}
+
+h1
+{
+	font-size: 2em;
+}
+
+h2
+{
+	font-size: 1.5em;
+}
+
+hr
+{
+	border: none;
+	border-bottom: solid 1px;
+	margin-left: 30%;
+	margin-right: 30%;
+}
+
+ol,
+ul
+{
+	margin-left: 1em;
+	margin-right: 1em;
+	padding: 0;
+}
+
+li
+{
+	list-style-type: none;
+}
+
+li::before
+{
+	content: ">";
+	padding-right: 1em;
+}
+
+a
+{
+	color: #51de9a;
+	text-decoration: none;
+}
+
+img
+{
+	height: 0.7em;
+	width: auto;
+}
