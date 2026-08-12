@@ -13,3 +13,5 @@ Programming
   microkernel operating system.
 - [Pr](https://codeberg.org/fransaccone/Pr) - A simple POSIX package manager.
 - [Site](https://codeberg.org/fransaccone/Site) - This website's code.
+- [Typ](https://codeberg.org/fransaccone/Typ) - An original typeface (and the
+  one used by this website!).
