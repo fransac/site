@@ -49,7 +49,7 @@ h1
 h2::before
 {
 	content: "*";
-	padding-right: 1em;
+	margin-right: 1em;
 }
 
 blockquote,
@@ -70,7 +70,7 @@ pre::before
 {
 	content: "CODE";
 	display: block;
-	padding-bottom: 1em;
+	margin-bottom: 1em;
 	opacity: 0.5;
 }
 
@@ -97,7 +97,7 @@ li::before
 {
 	content: ">";
 	left: 0;
-	padding-right: 1em;
+	margin-right: 1em;
 	position: absolute;
 	top: 0;
 }
