@@ -1,6 +1,7 @@
 include config.mk
 
 SRC = src
+TEMPLATE = template
 
 OUTS = index.html \
        la-tela-di-penelope/index.html \
@@ -33,6 +34,6 @@ uninstall:
 	done
 
 $(OUTS):
-	cat template/header.html > $(SRC)/$@
+	cat $(TEMPLATE)/header.html > $(SRC)/$@
 	$(MD2HTML) $(MD2HTMLFLAGS) $(SRC)/$(@:.html=.md) >> $(SRC)/$@
-	cat template/footer.html >> $(SRC)/$@
+	cat $(TEMPLATE)/footer.html >> $(SRC)/$@
