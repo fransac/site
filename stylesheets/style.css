@@ -1,0 +1,13 @@
+@font-face
+{
+	src: url("/fonts/Typ.ttf");
+	font-family: "Typ";
+
+	font-style: normal;
+	font-weight: 400;
+}
+
+body
+{
+	font-family: "Typ", monospace;
+}

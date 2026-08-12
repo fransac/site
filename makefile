@@ -3,7 +3,8 @@ include config.mk
 OUTS = index.html \
        la-tela-di-penelope/index.html \
 
-PUBLICOUTS = la-tela-di-penelope/music \
+PUBLICOUTS = fonts \
+             la-tela-di-penelope/music \
 
 .PHONY: all clean install uninstall
 
