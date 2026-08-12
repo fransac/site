@@ -9,5 +9,12 @@
 
 body
 {
+	background-color: #000000;
+	color: #ffffff;
 	font-family: "Typ", monospace;
+	line-height: 1.6;
+	margin: 0 auto;
+	max-width: 38em;
+	overflow-wrap: break-word;
+	padding: 0 2em;
 }
