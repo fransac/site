@@ -24,8 +24,8 @@ install: all
 		cp -rf "$(SRC)/$$o" "$(DESTDIR)$(ROOT)/$$o"; \
 	done
 
-	mkdir -p $(DESTDIR)$(ROOT)
-	cp -rf $(ASSETS) $(DESTDIR)$(ROOT)
+	mkdir -p $$(dirname $(DESTDIR)$(ROOT)/$(ASSETS))
+	cp -rf $(ASSETS) $(DESTDIR)$(ROOT)/$(ASSETS)
 
 uninstall:
 	for o in $(OUTS); \
