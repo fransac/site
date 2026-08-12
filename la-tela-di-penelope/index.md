@@ -2,7 +2,7 @@ La tela di Penelope
 ===================
 
 - [Eco](./music/eco.flac)
-- [Eredità](./music/eredita.flac)
+- [Eredita`](./music/eredita.flac)
 - [Nessuno](./music/nessuno.flac)
 - [Veglia](./music/veglia.flac)
 - [Dubbi](./music/dubbi.flac)
