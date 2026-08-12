@@ -2,3 +2,28 @@ Site
 ====
 
 Website.
+
+Requirements
+------------
+
+- A CLI Markdown-to-HTML converter (md2html).
+
+Installation
+------------
+
+Modify [`config.mk`](./config.mk) as needed.
+
+The following command builds the website in-source and installs the website's
+files to `ROOT`.
+
+	$ make install
+
+Structure
+---------
+
+The [`assets`][./assets] directory is copied to `ROOT` as is.
+
+The [`src`](./src) directory contains each page's Markdown file.
+
+The [`template`](./template) directory contains files that are used to generate
+the full HTML document of each page.
