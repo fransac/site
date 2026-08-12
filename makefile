@@ -28,6 +28,6 @@ uninstall:
 	done
 
 $(OUTS):
-	cat header.html > $@
+	cat template/header.html > $@
 	$(MD2HTML) $(MD2HTMLFLAGS) $(@:.html=.md) >> $@
-	cat footer.html >> $@
+	cat template/footer.html >> $@
