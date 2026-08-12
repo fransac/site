@@ -5,6 +5,7 @@ OUTS = index.html \
 
 PUBLICOUTS = fonts \
              la-tela-di-penelope/music \
+             stylesheets \
 
 .PHONY: all clean install uninstall
 
