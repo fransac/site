@@ -1,3 +1,2 @@
 *.html
-!footer.html
-!header.html
+!template/*.html
