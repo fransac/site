@@ -4,7 +4,7 @@ Francesco's public archive
 Music
 -----
 
-- [La tela di Penelope](./la-tela-di-penelope)
+- [La tela di Penelope](./la-tela-di-penelope/)
 
 Programming
 -----------
