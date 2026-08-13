@@ -4,7 +4,8 @@ ASSETS = assets
 SRC = src
 TEMPLATE = template
 
-OUTS = index.html \
+OUTS = 404.html \
+       index.html \
        la-tela-di-penelope/index.html \
 
 .PHONY: all clean install uninstall
