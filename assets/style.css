@@ -97,7 +97,6 @@ li::before
 {
 	content: "-";
 	left: 0;
-	margin-right: 1em;
 	position: absolute;
 	top: 0;
 }
