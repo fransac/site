@@ -1,7 +1,7 @@
 @font-face
 {
-	src: url("/assets/fonts/Typ.ttf");
-	font-family: "Typ";
+	src: url("/assets/fonts/typ.ttf");
+	font-family: "typ";
 
 	font-style: normal;
 	font-weight: 400;
@@ -16,7 +16,7 @@ body
 {
 	background-color: #000000;
 	color: #ffffff;
-	font-family: "Typ", monospace;
+	font-family: "typ", monospace;
 	line-height: 1.6;
 	margin: 0 auto;
 	max-width: 38em;
