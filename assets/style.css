@@ -22,7 +22,7 @@ body
 	max-width: calc(100% - (2 * 1ch));
 	width: 32ch;
 	overflow-wrap: break-word;
-	padding: 0 1ch;
+	padding: 1ch;
 }
 
 footer
