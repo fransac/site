@@ -118,6 +118,8 @@ a
 
 img
 {
-	height: 0.7ch;
-	width: auto;
+	border: solid 0.2ch;
+	max-width: calc(100% - (2 * 1ch));
+	padding: 1ch;
+	width: 24ch;
 }
