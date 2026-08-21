@@ -17,7 +17,7 @@ body
 	background-color: #000000;
 	color: #ffffff;
 	font-family: "typ", monospace;
-	line-height: 1ch;
+	line-height: 1.2ch;
 	margin: 0 auto;
 	max-width: calc(100% - (2 * 1ch));
 	width: 32ch;
