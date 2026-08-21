@@ -60,10 +60,9 @@ h2::before
 }
 
 blockquote,
-ol,
+li,
 p,
-pre,
-ul
+pre
 {
 	margin-bottom: 1ch;
 }
