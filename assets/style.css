@@ -39,14 +39,19 @@ footer
 	margin: 0;
 }
 
+blockquote,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6
+h6,
+ol,
+p,
+pre,
+ul
 {
-	margin: 2ch 0;
+	margin-bottom: 1ch;
 }
 
 h1
@@ -58,15 +63,6 @@ h2::before
 {
 	content: "*";
 	margin-right: 1ch;
-}
-
-blockquote,
-ol,
-p,
-pre,
-ul
-{
-	margin-bottom: 1ch;
 }
 
 blockquote,
