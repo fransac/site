@@ -1,3 +1,5 @@
+/* Fonts. */
+
 @font-face
 {
 	src: url("/assets/fonts/typ.ttf");
@@ -6,6 +8,8 @@
 	font-style: normal;
 	font-weight: 400;
 }
+
+/* Base. */
 
 html
 {
@@ -19,16 +23,10 @@ body
 	font-family: "typ", monospace;
 	line-height: 1.2ch;
 	margin: 0 auto;
-	max-width: calc(100% - (2 * 1ch)); /* Considering double padding. */
+	max-width: calc(100% - 2ch); /* Considering double padding. */
 	width: 32ch;
 	overflow-wrap: break-word;
 	padding: 1ch;
-}
-
-footer
-{
-	margin-top: 2ch;
-	text-align: right;
 }
 
 *
@@ -39,6 +37,8 @@ footer
 	padding: 0;
 	margin: 0;
 }
+
+/* General. */
 
 blockquote,
 h1,
@@ -82,14 +82,6 @@ pre::before
 	margin-bottom: 1ch;
 }
 
-hr
-{
-	border: none;
-	border-bottom: solid 0.2ch;
-	margin: 2ch 0;
-	width: 100%;
-}
-
 ol,
 ul
 {
@@ -111,6 +103,15 @@ li::before
 	top: 0;
 }
 
+
+hr
+{
+	border: none;
+	border-bottom: solid 0.2ch;
+	margin: 2ch 0;
+	width: 100%;
+}
+
 a
 {
 	color: #4fd970;
@@ -123,4 +124,12 @@ img
 	max-width: calc(100% - (2 * 1ch)); /* Considering double padding. */
 	padding: 1ch;
 	width: 24ch;
+}
+
+/* Specific. */
+
+footer
+{
+	margin-top: 2ch;
+	text-align: right;
 }
