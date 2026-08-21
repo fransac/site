@@ -19,6 +19,7 @@ body
 	font-family: "typ", monospace;
 	line-height: 1.6;
 	margin: 0 auto;
+	max-width: calc(100% - (2 * 2ch));
 	width: 32ch;
 	overflow-wrap: break-word;
 	padding: 0 2ch;
