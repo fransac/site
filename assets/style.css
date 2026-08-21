@@ -48,15 +48,10 @@ body
 
 /* General. */
 
-blockquote,
 h1,
-h2,
-ol,
-p,
-pre,
-ul
+h2
 {
-	margin: 1ch 0;
+	margin: 2ch 0;
 }
 
 h1
@@ -68,6 +63,15 @@ h2::before
 {
 	content: "*";
 	margin-right: 1ch;
+}
+
+blockquote,
+ol,
+p,
+pre,
+ul
+{
+	margin: 1ch 0;
 }
 
 blockquote,
