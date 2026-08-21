@@ -136,8 +136,8 @@ img
 
 footer
 {
+	align-items: flex-end;
 	display: flex;
 	flex-direction: column;
 	margin: 2ch 0;
-	text-align: right;
 }
