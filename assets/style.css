@@ -85,6 +85,8 @@ hr
 {
 	border: none;
 	border-bottom: solid 0.2ch;
+	margin: 2ch 0;
+	width: 100%;
 }
 
 ol,
