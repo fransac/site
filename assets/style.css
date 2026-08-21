@@ -70,7 +70,7 @@ pre
 blockquote,
 pre
 {
-	border-left: solid 0.25ch;
+	border-left: solid 0.2ch;
 	padding-left: 1ch;
 }
 
@@ -85,7 +85,7 @@ pre::before
 hr
 {
 	border: none;
-	border-bottom: solid 1px;
+	border-bottom: solid 0.2ch;
 }
 
 ol,
