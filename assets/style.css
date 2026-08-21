@@ -75,9 +75,9 @@ pre
 pre::before
 {
 	content: "CODE";
+	color: #808080;
 	display: block;
 	margin-bottom: 1ch;
-	opacity: 0.5;
 }
 
 hr
