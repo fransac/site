@@ -19,7 +19,7 @@ body
 	font-family: "typ", monospace;
 	line-height: 1.2ch;
 	margin: 0 auto;
-	max-width: calc(100% - (2 * 1ch));
+	max-width: calc(100% - (2 * 1ch)); /* Considering double padding. */
 	width: 32ch;
 	overflow-wrap: break-word;
 	padding: 1ch;
@@ -70,7 +70,7 @@ blockquote,
 pre
 {
 	border-left: solid 0.2ch;
-	padding-left: calc(1ch - 0.2ch);
+	padding-left: calc(1ch - 0.2ch); /* Considering border width. */
 }
 
 pre::before
@@ -119,7 +119,7 @@ a
 img
 {
 	border: solid 0.2ch;
-	max-width: calc(100% - (2 * 1ch));
+	max-width: calc(100% - (2 * 1ch)); /* Considering double padding. */
 	padding: 1ch;
 	width: 24ch;
 }
