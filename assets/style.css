@@ -26,7 +26,7 @@ body
 	max-width: calc(100% - 2ch); /* Considering double padding. */
 	width: 32ch;
 	overflow-wrap: break-word;
-	padding: 1ch;
+	padding: 0 1ch;
 }
 
 *
