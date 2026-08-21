@@ -39,6 +39,11 @@ body
 	margin: 0;
 }
 
+*::before
+{
+	color: #808080;
+}
+
 /* General. */
 
 blockquote,
@@ -74,7 +79,6 @@ pre
 pre::before
 {
 	content: "CODE";
-	color: #808080;
 	display: block;
 	margin-bottom: 1ch;
 }
