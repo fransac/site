@@ -11,19 +11,19 @@ Requirements
 Installation
 ------------
 
-Modify [`config.mk`](./config.mk) as needed.
+Modify <config.mk> as needed.
 
 The following command builds the website in-source and installs the website's
-files to `ROOT`.
+files to ROOT.
 
 	$ make install
 
 Structure
 ---------
 
-The [`assets`][./assets] directory is copied to `ROOT` as is.
+The <assets> directory is copied to ROOT as is.
 
-The [`src`](./src) directory contains each page's Markdown file.
+The <src> directory contains each page's Markdown file.
 
-The [`template`](./template) directory contains files that are used to generate
-the full HTML document of each page.
+The <template> directory contains files that are used to generate the full HTML
+document of each page.
