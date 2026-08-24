@@ -52,6 +52,7 @@ h1,
 h2
 {
 	margin: 2ch 0;
+	text-transform: uppercase;
 }
 
 h1
@@ -59,10 +60,9 @@ h1
 	text-align: right;
 }
 
-h2::before
+h2
 {
-	content: "*";
-	margin-right: 1ch;
+	color: #808080;
 }
 
 blockquote,
