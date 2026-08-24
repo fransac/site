@@ -10,10 +10,10 @@ Music
 Programming
 -----------
 
-- [op](https://codeberg.org/francescosaccone/op) - An attempt at making a
+- [Op](https://codeberg.org/francescosaccone/Op) - An attempt at making a
   microkernel operating system.
-- [pack](https://codeberg.org/francescosaccone/pack) - A simple POSIX package
+- [Pack](https://codeberg.org/francescosaccone/Pack) - A simple POSIX package
   manager.
-- [site](https://codeberg.org/francescosaccone/site) - This website's code.
-- [typ](https://codeberg.org/francescosaccone/typ) - An original typeface (and
+- [Site](https://codeberg.org/francescosaccone/Site) - This website's code.
+- [Typ](https://codeberg.org/francescosaccone/Typ) - An original typeface (and
   the one used by this website!).
