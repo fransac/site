@@ -1,16 +1,15 @@
-                                                                            SITE
+Site
+====
 
 A personal website.
 
-
-REQUIREMENTS
-
+Requirements
+------------
 
 - A CLI Markdown-to-HTML converter (md2html).
 
-
-INSTALLATION
-
+Installation
+------------
 
 Modify <config.mk> as needed.
 
@@ -19,9 +18,8 @@ files to ROOT.
 
 	$ make install
 
-
-STRUCTURE
-
+Structure
+---------
 
 The <assets> directory is copied to ROOT as is.
 
