@@ -6,6 +6,7 @@ A personal website.
 Requirements
 ------------
 
+- ImageMagick (magick).
 - A CLI Markdown-to-HTML converter (md2html).
 
 Installation
