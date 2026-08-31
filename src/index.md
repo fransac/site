@@ -10,19 +10,17 @@ Music
 Programming
 -----------
 
-- [Op](https://codeberg.org/fransaccone/Op) - An attempt at making a microkernel
+- [Op](https://github.com/fransac/op) - An attempt at making a microkernel
   operating system.
-- [Pack](https://codeberg.org/fransaccone/Pack) - A simple POSIX package
-  manager.
-- [Secret](https://codeberg.org/fransaccone/Secret) - A POSIX utility to handle
+- [Pack](https://github.com/fransac/pack) - A simple POSIX package manager.
+- [Secret](https://github.com/fransac/secret) - A POSIX utility to handle
   secrets using age encryption.
-- [Site](https://codeberg.org/fransaccone/Site) - This website's code.
-- [Typ](https://codeberg.org/fransaccone/Typ) - An original typeface (and the
-  one used by this website!).
+- [Site](https://github.com/fransac/site) - This website's code.
+- [Typ](https://github.com/fransac/typ) - An original typeface (and the one
+  used by this website!).
 
 Links
 -----
 
 - [EMAIL](mailto:site&#64;fran&#46;one)
-- [CODEBERG](https://codeberg.org/fransaccone)
-- [GITHUB](https://github.com/fransaccon)
+- [GITHUB](https://github.com/fransac)
