@@ -120,10 +120,27 @@ a
 	text-decoration: none;
 }
 
-img
+/* Do not style imgs in header and footer. */
+main img
 {
 	border-style: solid;
 	max-width: calc(100% - (2 * 1ch)); /* Considering double padding. */
 	padding: 1ch;
 	width: 24ch;
+}
+
+/* Specific. */
+
+header
+{
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+header > img
+{
+	image-rendering: crisp-edges;
+	transform: scaleY(-1);
+	width: calc(8ch / 5); /* Match pixel size with the 5x5 font. */
 }
