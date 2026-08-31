@@ -127,13 +127,3 @@ img
 	padding: 1ch;
 	width: 24ch;
 }
-
-/* Specific. */
-
-footer
-{
-	align-items: flex-end;
-	display: flex;
-	flex-direction: column;
-	margin: 2ch 0;
-}
