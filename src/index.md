@@ -16,8 +16,8 @@ Programming
 - [Secret](https://github.com/fransac/secret): A POSIX utility to handle secrets
   using age encryption.
 - [Site](https://github.com/fransac/site): This website's code.
-- [Typ](https://github.com/fransac/typ): An original typeface (and the one used
-  by this website!).
+- [Typ](https://github.com/fransac/typ): An original typeface, and also the one
+  used in this website.
 
 Links
 -----
