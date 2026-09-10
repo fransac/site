@@ -9,6 +9,9 @@
 </p></noscript>
 <p><canvas id="canvas"></canvas></p>
 <script>
+/* ID given by setInterval. */
+let update_interval = null;
+
 /* The game runs on a grid of pixels of width WIDTH and height HEIGHT. */
 const WIDTH = 20;
 const HEIGHT = 15;
@@ -64,5 +67,5 @@ function update() {
 	canvas.height = canvas.width * (HEIGHT / WIDTH);
 }
 
-setInterval(update, 500);
+update_interval = setInterval(update, 500);
 </script>
