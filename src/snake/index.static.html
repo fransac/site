@@ -106,10 +106,9 @@ function update() {
 	/* Clear canvas. */
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-
 	/* Draw snake. */
 	for (const [x, y, direction] of snake)
-		draw_pixel(x, y, "#4fd970");
+		draw_pixel(x, y, "#ffffff");
 }
 
 /* Update snake head direction when arrow keys are pressed. Do not change
