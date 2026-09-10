@@ -26,6 +26,9 @@ updating = false;
    element is its head. */
 const snake = [[0, 0]];
 
+/* The coordinates of the apple. Initialized on the first update call. */
+let apple = null;
+
 /* The direction chosen by the user. 0 means up, 1 means right, 2 means down and
    3 means left. */
 let chosen_direction = 1;
@@ -78,7 +81,7 @@ function random_free_pixel() {
 }
 
 function update() {
-	let head_pointed;
+	let head_pointed, tail;
 
 	/* Wait if updating is set. Though it is most likely completely useless,
 	   I still like to keep it. */
@@ -124,7 +127,19 @@ function update() {
 		if (head_pointed[0] === x && head_pointed[1] === y)
 			lose();
 
-	/* 2. Movement */
+	/* 2. Eating detection. */
+
+	/* If apple is not yet initialized, generate it. Otherwise, if the head
+	   is pointing to it, save tail to enqueue it after the snake moves and
+	   regenerate the apple. */
+	if (!apple) {
+		apple = random_free_pixel();
+	} else if (head_pointed[0] == apple[0] && head_pointed[1] == apple[1]) {
+		tail = snake[snake.length - 1];
+		apple = random_free_pixel();
+	}
+
+	/* 3. Movement */
 
 	/* Excluding head, make every snake pixel the next one. */
 	for (let i = snake.length - 1; i > 0; i--)
@@ -133,20 +148,27 @@ function update() {
 	/* Move head to its pointed pixel. */
 	snake[0] = head_pointed;
 
+	/* If tail has been set, enqueue it. */
+	if (tail)
+		snake.push(tail);
+
 	/* Print debug message. */
 	console.clear();
 	console.debug(snake);
 
-	/* 3. Draw */
+	/* 4. Draw */
 
 	/* Clear canvas. */
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+	/* Draw apple. */
+	draw_pixel(apple[0], apple[1], "#4fd970");
 
 	/* Draw snake. */
 	for (const [x, y] of snake)
 		draw_pixel(x, y, "#ffffff");
 
-	/* Exit the function. */
+	/* 5. Exit the function. */
 
 	updating = false;
 }
