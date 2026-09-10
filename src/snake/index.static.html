@@ -127,7 +127,7 @@ function update() {
 	/* 2. Movement */
 
 	/* Excluding head, make every snake pixel the next one. */
-	for (let i = 1; i < snake.length; i++)
+	for (let i = snake.length - 1; i > 0; i--)
 		snake[i] = snake[i - 1];
 
 	/* Move head to its pointed pixel. */
