@@ -72,7 +72,7 @@ function pointed_pixel([x, y, direction]) {
 }
 
 function update() {
-	const head_pointed = pointed_pixel(snake[0]);
+	let head_pointed = pointed_pixel(snake[0]);
 
 	/* 0. Window resizing. */
 
@@ -100,6 +100,20 @@ function update() {
 
 	/* Move head to its pointed pixel without touching its direction. */
 	[snake[0][0], snake[0][1]] = pointed_pixel(snake[0]);
+
+	/* 3. Draw */
+
+	/* Clear canvas. */
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+	/* Draw pixel pointed by head. The head_pointed variable is obsolete now
+	   that the snake moved, and needs to be recomputed. */
+	head_pointed = pointed_pixel(snake[0]);
+	draw_pixel(head_pointed[0], head_pointed[1], "#808080");
+
+	/* Draw snake. */
+	for (const [x, y, direction] of snake)
+		draw_pixel(x, y, "#4fd970");
 }
 
 /* Update snake head direction when arrow keys are pressed. Do not change
