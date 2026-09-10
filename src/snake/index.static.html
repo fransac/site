@@ -101,6 +101,9 @@ function update() {
 	/* Move head to its pointed pixel without touching its direction. */
 	[snake[0][0], snake[0][1]] = pointed_pixel(snake[0]);
 
+	/* Print debug message. */
+	console.debug(snake);
+
 	/* 3. Draw */
 
 	/* Clear canvas. */
