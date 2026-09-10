@@ -37,8 +37,7 @@ function draw_pixel(x, y, color) {
 	}
 
 	ctx.fillStyle = color;
-	ctx.rect(pixel_size * x, pixel_size * y, pixel_size, pixel_size);
-	ctx.fill();
+	ctx.fillRect(pixel_size * x, pixel_size * y, pixel_size, pixel_size);
 }
 
 /* Lose. */
