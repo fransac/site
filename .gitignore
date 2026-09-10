@@ -1,4 +1,5 @@
 *.html
+!*.static.html
 !template/*.html
 
 # Used for testing.

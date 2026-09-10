@@ -1,0 +1,40 @@
+<h1>Snake</h1>
+<p>
+	I decided to make a simple snake game in JavaScript. Why? Because I had
+	too much free time.
+</p>
+<noscript><p>
+	If you can't see the game down here, it probably means that you have
+	JavaScript disabled. Do yourself a favour and keep it like that ^^.
+</p></noscript>
+<p><canvas id="canvas"></canvas></p>
+<script>
+/* The game runs on a grid of pixels of width 20 and height 15. That means the
+   window ratio is 4/3. */
+
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+/* Draw pixel with a specific hex color string. If color is null, the pixel is
+   instead erased. The coordinates are 0-based. */
+function draw_pixel(x, y, color) {
+	const pixel_size = canvas.width / 20;
+
+	if (!color) {
+		ctx.clearRect(pixel_size * x, pixel_size * y,
+		              pixel_size, pixel_size);
+		return;
+	}
+
+	ctx.fillStyle = color;
+	ctx.rect(pixel_size * x, pixel_size * y, pixel_size, pixel_size);
+	ctx.fill();
+}
+
+function update() {
+	canvas.width = canvas.parentNode.clientWidth;
+	canvas.height = canvas.width * (3 / 4);
+}
+
+setInterval(update, 500);
+</script>
