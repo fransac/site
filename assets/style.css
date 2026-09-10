@@ -71,7 +71,7 @@ blockquote,
 pre
 {
 	border-left-style: solid;
-	padding-left: calc(1ch - (1ch / 6)); /* Considering border width. */
+	padding: 0 0 0 calc(1ch - (1ch / 6)); /* Considering border width. */
 }
 
 pre
