@@ -29,7 +29,7 @@ body
 *
 {
 	border-color: #808080;
-	border-width: 0.2ch;
+	border-width: calc(1ch / 6); /* 1 pixel of the 6x6 font. */
 	color: inherit;
 	font-family: inherit;
 	font-size: inherit;
@@ -71,7 +71,7 @@ blockquote,
 pre
 {
 	border-left-style: solid;
-	padding-left: calc(1ch - 0.2ch); /* Considering border width. */
+	padding-left: calc(1ch - (1ch / 6)); /* Considering border width. */
 	overflow-x: scroll;
 }
 
