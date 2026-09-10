@@ -9,8 +9,9 @@
 </p></noscript>
 <p><canvas id="canvas"></canvas></p>
 <script>
-/* The game runs on a grid of pixels of width 20 and height 15. That means the
-   window ratio is 4/3. */
+/* The game runs on a grid of pixels of width WIDTH and height HEIGHT. */
+const WIDTH = 20;
+const HEIGHT = 15;
 
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
@@ -18,7 +19,7 @@ const ctx = canvas.getContext('2d');
 /* Draw pixel with a specific hex color string. If color is null, the pixel is
    instead erased. The coordinates are 0-based. */
 function draw_pixel(x, y, color) {
-	const pixel_size = canvas.width / 20;
+	const pixel_size = canvas.width / WIDTH;
 
 	if (!color) {
 		ctx.clearRect(pixel_size * x, pixel_size * y,
@@ -33,7 +34,7 @@ function draw_pixel(x, y, color) {
 
 function update() {
 	canvas.width = canvas.parentNode.clientWidth;
-	canvas.height = canvas.width * (3 / 4);
+	canvas.height = canvas.width * (HEIGHT / WIDTH);
 }
 
 setInterval(update, 500);
