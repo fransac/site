@@ -119,13 +119,18 @@ function update() {
 
 	/* Walls. */
 	if (head_pointed[0] < 0 || head_pointed[0] >= WIDTH
-	 || head_pointed[1] < 0 || head_pointed[1] >= HEIGHT)
+	 || head_pointed[1] < 0 || head_pointed[1] >= HEIGHT) {
 		lose();
+		return;
+	}
 
 	/* Snake body, excluding the tail. */
-	for (const [x, y, direction] of snake.slice(0, -1))
-		if (head_pointed[0] === x && head_pointed[1] === y)
+	for (const [x, y, direction] of snake.slice(0, -1)) {
+		if (head_pointed[0] === x && head_pointed[1] === y) {
 			lose();
+			return;
+		}
+	}
 
 	/* 2. Eating detection. */
 
