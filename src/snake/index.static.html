@@ -7,7 +7,7 @@
 	If you can't see the game down here, it probably means that you have
 	JavaScript disabled. Do yourself a favour and keep it like that ^^.
 </p></noscript>
-<p><canvas id="canvas"></canvas></p>
+<p id="canvas-p"><canvas id="canvas"></canvas></p>
 <script>
 /* ID given by setInterval. */
 let update_interval = null;
@@ -39,6 +39,17 @@ function draw_pixel(x, y, color) {
 	ctx.fillStyle = color;
 	ctx.rect(pixel_size * x, pixel_size * y, pixel_size, pixel_size);
 	ctx.fill();
+}
+
+/* Lose. */
+function lose() {
+	const bq = document.createElement('blockquote');
+	const canvas_p = document.getElementById('canvas-p');
+
+	clearInterval(update_interval);
+
+	bq.textContent = `You lost! Your snake had a size of ${snake.length}.`;
+	canvas_p.parentNode.insertBefore(bq, canvas_p);
 }
 
 /* Based on the x and y coordinate and the direction of the pixel, get the x and
