@@ -74,8 +74,8 @@ function random_free_pixel() {
 	   may be extremely inefficient if the snake is long. */
 	do
 		p = [
-			Math.floor(Math.random() * (WIDTH - 1)),
-			Math.floor(Math.random() * (HEIGHT - 1)),
+			Math.floor(Math.random() * WIDTH),
+			Math.floor(Math.random() * HEIGHT),
 		];
 	while (snake.some(([x, y, direction]) => x === p[0] && y === p[1]))
 
