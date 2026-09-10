@@ -22,14 +22,18 @@ const ctx = canvas.getContext('2d');
 /* Whether the update function is running. */
 updating = false;
 
-/* Queue of 3-tuples of ints. The first 2 ints of each element are the
-   coordinates of a pixel occupied by the snake; the first element is its head.
-   The third int of each element is the direction the pixel will move to on
-   update; 0 means up, 1 means right, 2 means down and 3 means left. */
-const snake = [[0, 0, 1]];
+/* Queue of the coordinates of each pixel occupied by the snake; the first
+   element is its head. */
+const snake = [[0, 0]];
 
-/* The direction, as described in the comment for snake, chosen by the user. */
+/* The direction chosen by the user. 0 means up, 1 means right, 2 means down and
+   3 means left. */
 let chosen_direction = 1;
+
+/* The final direction the snake will take. The same description of
+   chosen_direction applies here. This changed to be chosen_direction on every
+   update. */
+let direction = 1;
 
 /* Draw pixel with a specific hex color string. If color is null, the pixel is
    instead erased. The coordinates are 0-based. */
@@ -57,26 +61,6 @@ function lose() {
 	canvas_p.parentNode.insertBefore(bq, canvas_p);
 }
 
-/* Based on the x and y coordinate and the direction of the pixel, get the x and
-   y pair of the pointed adjacent pixel. */
-function pointed_pixel([x, y, direction]) {
-	switch (direction) {
-		case 0:
-			return [x, y - 1];
-		case 1:
-			return [x + 1, y];
-		case 2:
-			return [x, y + 1];
-		case 3:
-			return [x - 1, y];
-		default:
-			/* Unreachable. Hopefully the user does not mess with
-			   this awesome incredible dynamically typed interpreted
-			   language. */
-			return null;
-	}
-}
-
 /* Return random coordinates, excluding the ones occupied by the snake, */
 function random_free_pixel() {
 	let p;
@@ -94,16 +78,34 @@ function random_free_pixel() {
 }
 
 function update() {
+	let head_pointed;
+
 	/* Wait if updating is set. Though it is most likely completely useless,
 	   I still like to keep it. */
 	while (updating);
 
 	updating = true;
 
-	/* Apply chosen direction. */
-	snake[0][2] = chosen_direction;
+	/* Finalize chosen direction. */
+	direction = chosen_direction;
 
-	const head_pointed = pointed_pixel(snake[0]);
+	/* Compute the pixel pointed by head, based on the chosen direction. */
+	switch(direction) {
+		case 0:
+			head_pointed = [snake[0][0], snake[0][1] - 1];
+			break;
+		case 1:
+			head_pointed = [snake[0][0] + 1, snake[0][1]];
+			break;
+		case 2:
+			head_pointed = [snake[0][0], snake[0][1] + 1];
+			break;
+		case 3:
+			head_pointed = [snake[0][0] - 1, snake[0][1]];
+			break;
+		default:
+			break;
+	}
 
 	/* 0. Window resizing. */
 
@@ -124,13 +126,12 @@ function update() {
 
 	/* 2. Movement */
 
-	/* Excluding head, move every snake pixel to their pointed pixel and
-	   inherit direction from adjacent pixel closer to head. */
+	/* Excluding head, make every snake pixel the next one. */
 	for (let i = 1; i < snake.length; i++)
-		snake[i] = [...pointed_pixel(snake[i]), snake[i - 1][2]];
+		snake[i] = snake[i - 1];
 
-	/* Move head to its pointed pixel without touching its direction. */
-	[snake[0][0], snake[0][1]] = pointed_pixel(snake[0]);
+	/* Move head to its pointed pixel. */
+	snake[0] = head_pointed;
 
 	/* Print debug message. */
 	console.clear();
@@ -142,7 +143,7 @@ function update() {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 	/* Draw snake. */
-	for (const [x, y, direction] of snake)
+	for (const [x, y] of snake)
 		draw_pixel(x, y, "#ffffff");
 
 	/* Exit the function. */
@@ -156,13 +157,13 @@ document.onkeydown = e => {
 	if (updating)
 		return;
 
-	if (e.keyCode === 37 && snake[0][2] != 1)
+	if (e.keyCode === 37 && direction != 1)
 		chosen_direction = 3; /* Left */
-	else if (e.keyCode === 38 && snake[0][2] != 2)
+	else if (e.keyCode === 38 && direction != 2)
 		chosen_direction = 0; /* Up */
-	else if (e.keyCode === 39 && snake[0][2] != 3)
+	else if (e.keyCode === 39 && direction != 3)
 		chosen_direction = 1; /* Right */
-	else if (e.keyCode === 40 && snake[0][2] != 0)
+	else if (e.keyCode === 40 && direction != 0)
 		chosen_direction = 2; /* Down */
 }
 
