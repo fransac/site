@@ -93,5 +93,25 @@ function update() {
 			lose();
 }
 
+/* Update snake head direction when arrow keys are pressed. */
+document.onkeydown = e => {
+	switch (e.keyCode) {
+		case 37: /* Left. */
+			snake[0][2] = 3;
+			break;
+		case 38: /* Up. */
+			snake[0][2] = 0;
+			break;
+		case 39: /* Right. */
+			snake[0][2] = 1;
+			break;
+		case 40: /* Down. */
+			snake[0][2] = 2;
+			break;
+		default:
+			break;
+	}
+}
+
 update_interval = setInterval(update, 500);
 </script>
