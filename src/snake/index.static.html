@@ -16,6 +16,12 @@ const HEIGHT = 15;
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
+/* Queue of 3-tuples of ints. The first 2 ints of each element are the
+   coordinates of a pixel occupied by the snake; the first element is its head.
+   The third int of each element is the direction the pixel will move to on
+   update; 0 means up, 1 means right, 2 means down and 3 means left. */
+const snake = [[0, 0, 1]];
+
 /* Draw pixel with a specific hex color string. If color is null, the pixel is
    instead erased. The coordinates are 0-based. */
 function draw_pixel(x, y, color) {
