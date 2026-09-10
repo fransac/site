@@ -73,8 +73,24 @@ function pointed_pixel([x, y, direction]) {
 }
 
 function update() {
+	const head_pointed = pointed_pixel(snake[0]);
+
+	/* 0. Window resizing. */
+
 	canvas.width = canvas.parentNode.clientWidth;
 	canvas.height = canvas.width * (HEIGHT / WIDTH);
+
+	/* 1. Loss detection. */
+
+	/* Walls. */
+	if (head_pointed[0] < 0 || head_pointed[0] >= WIDTH
+	 || head_pointed[1] < 0 || head_pointed[1] >= HEIGHT)
+		lose();
+
+	/* Snake body, excluding the tail. */
+	for (const [x, y, direction] of snake.slice(0, -1))
+		if (head_pointed[0] === x && head_pointed[1] === y)
+			lose();
 }
 
 update_interval = setInterval(update, 500);
