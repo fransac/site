@@ -91,6 +91,16 @@ function update() {
 	for (const [x, y, direction] of snake.slice(0, -1))
 		if (head_pointed[0] === x && head_pointed[1] === y)
 			lose();
+
+	/* 2. Movement */
+
+	/* Excluding head, move every snake pixel to their pointed pixel and
+	   inherit direction from adjacent pixel closer to head. */
+	for (let i = 1; i < snake.length; i++)
+		snake[i] = [...pointed_pixel(snake[i]), snake[i - 1][2]];
+
+	/* Move head to its pointed pixel without touching its direction. */
+	[snake[0][0], snake[0][1]] = pointed_pixel(snake[0]);
 }
 
 /* Update snake head direction when arrow keys are pressed. */
