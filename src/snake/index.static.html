@@ -19,6 +19,9 @@ const HEIGHT = 15;
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
+/* Whether the update function is running. */
+updating = false;
+
 /* Queue of 3-tuples of ints. The first 2 ints of each element are the
    coordinates of a pixel occupied by the snake; the first element is its head.
    The third int of each element is the direction the pixel will move to on
@@ -74,6 +77,10 @@ function pointed_pixel([x, y, direction]) {
 function update() {
 	const head_pointed = pointed_pixel(snake[0]);
 
+	while (updating);
+
+	updating = true;
+
 	/* 0. Window resizing. */
 
 	canvas.width = canvas.parentNode.clientWidth;
@@ -112,11 +119,18 @@ function update() {
 	/* Draw snake. */
 	for (const [x, y, direction] of snake)
 		draw_pixel(x, y, "#ffffff");
+
+	/* Exit the function. */
+
+	updating = false;
 }
 
 /* Update snake head direction when arrow keys are pressed. Do not change
    the direction if the chosen one is the opposite of the current one. */
 document.onkeydown = e => {
+	if (updating)
+		return;
+
 	if (e.keyCode === 37 && snake[0][2] != 1)
 		snake[0][2] = 3; /* Left */
 	else if (e.keyCode === 38 && snake[0][2] != 2)
