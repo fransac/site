@@ -72,7 +72,11 @@ pre
 {
 	border-left-style: solid;
 	padding-left: calc(1ch - (1ch / 6)); /* Considering border width. */
-	overflow-x: scroll;
+}
+
+pre
+{
+	overflow-x: scroll
 }
 
 pre::before
