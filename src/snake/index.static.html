@@ -77,6 +77,22 @@ function pointed_pixel([x, y, direction]) {
 	}
 }
 
+/* Return random coordinates, excluding the ones occupied by the snake, */
+function random_free_pixel() {
+	let p;
+
+	/* Regenerate p until no value of snake has the same coordinates. This
+	   may be extremely inefficient if the snake is long. */
+	do
+		p = [
+			Math.floor(Math.random() * (WIDTH - 1)),
+			Math.floor(Math.random() * (HEIGHT - 1)),
+		];
+	while (snake.some(([x, y, direction]) => x === p[0] && y === p[1]))
+
+	return p;
+}
+
 function update() {
 	/* Wait if updating is set. Though it is most likely completely useless,
 	   I still like to keep it. */
