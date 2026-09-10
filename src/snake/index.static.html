@@ -103,24 +103,17 @@ function update() {
 	[snake[0][0], snake[0][1]] = pointed_pixel(snake[0]);
 }
 
-/* Update snake head direction when arrow keys are pressed. */
+/* Update snake head direction when arrow keys are pressed. Do not change
+   the direction if the chosen one is the opposite of the current one. */
 document.onkeydown = e => {
-	switch (e.keyCode) {
-		case 37: /* Left. */
-			snake[0][2] = 3;
-			break;
-		case 38: /* Up. */
-			snake[0][2] = 0;
-			break;
-		case 39: /* Right. */
-			snake[0][2] = 1;
-			break;
-		case 40: /* Down. */
-			snake[0][2] = 2;
-			break;
-		default:
-			break;
-	}
+	if (e.keyCode === 37 && snake[0][2] != 1)
+		snake[0][2] = 3; /* Left */
+	else if (e.keyCode === 38 && snake[0][2] != 2)
+		snake[0][2] = 0; /* Up */
+	else if (e.keyCode === 39 && snake[0][2] != 3)
+		snake[0][2] = 1; /* Right */
+	else if (e.keyCode === 40 && snake[0][2] != 0)
+		snake[0][2] = 2; /* Down */
 }
 
 update_interval = setInterval(update, 500);
