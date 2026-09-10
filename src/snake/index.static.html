@@ -20,8 +20,8 @@ let update_interval = null;
 const WIDTH = 20;
 const HEIGHT = 15;
 
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 canvas.style.borderStyle = "solid";
 
@@ -61,8 +61,8 @@ function draw_pixel(x, y, color) {
 
 /* Lose. */
 function lose() {
-	const bq = document.createElement('blockquote');
-	const canvas_p = document.getElementById('canvas-p');
+	const bq = document.createElement("blockquote");
+	const canvas_p = document.getElementById("canvas-p");
 
 	clearInterval(update_interval);
 
