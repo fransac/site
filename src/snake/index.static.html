@@ -28,6 +28,9 @@ updating = false;
    update; 0 means up, 1 means right, 2 means down and 3 means left. */
 const snake = [[0, 0, 1]];
 
+/* The direction, as described in the comment for snake, chosen by the user. */
+let chosen_direction = 1;
+
 /* Draw pixel with a specific hex color string. If color is null, the pixel is
    instead erased. The coordinates are 0-based. */
 function draw_pixel(x, y, color) {
@@ -75,11 +78,16 @@ function pointed_pixel([x, y, direction]) {
 }
 
 function update() {
-	const head_pointed = pointed_pixel(snake[0]);
-
+	/* Wait if updating is set. Though it is most likely completely useless,
+	   I still like to keep it. */
 	while (updating);
 
 	updating = true;
+
+	/* Apply chosen direction. */
+	snake[0][2] = chosen_direction;
+
+	const head_pointed = pointed_pixel(snake[0]);
 
 	/* 0. Window resizing. */
 
@@ -133,13 +141,13 @@ document.onkeydown = e => {
 		return;
 
 	if (e.keyCode === 37 && snake[0][2] != 1)
-		snake[0][2] = 3; /* Left */
+		chosen_direction = 3; /* Left */
 	else if (e.keyCode === 38 && snake[0][2] != 2)
-		snake[0][2] = 0; /* Up */
+		chosen_direction = 0; /* Up */
 	else if (e.keyCode === 39 && snake[0][2] != 3)
-		snake[0][2] = 1; /* Right */
+		chosen_direction = 1; /* Right */
 	else if (e.keyCode === 40 && snake[0][2] != 0)
-		snake[0][2] = 2; /* Down */
+		chosen_direction = 2; /* Down */
 }
 
 update_interval = setInterval(update, 500);
