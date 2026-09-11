@@ -4,18 +4,69 @@
 	too much free time and wanted to test my sanity.
 </p>
 <p>
-	The snake is controlled by the WASD keys. If you are on mobile or
-	don't have a keyboard, I'm sorry for you.
+	The snake is controlled by the WASD keys or the buttons below.
 </p>
 <noscript><p>
 	If you can't see the game down here, it probably means that you have
 	JavaScript disabled. Do yourself a favour and keep it like that ^^.
 </p></noscript>
 <p id="canvas-p"><canvas id="canvas"></canvas></p>
+<table><tbody>
+	<tr>
+		<th></th>
+		<th>
+			<button onclick="(() => {
+				choose_direction(0);
+			})()">^</button>
+		</th>
+		<th></th>
+	</tr>
+	<tr>
+		<th>
+			<button onclick="(() => {
+				choose_direction(3);
+			})()">&lt;</button>
+		</th>
+		<th>
+			<button onclick="(() => {
+				choose_direction(2);
+			})()">v</button>
+		</th>
+		<th>
+			<button onclick="(() => {
+				choose_direction(1);
+			})()">&gt;</button>
+		</th>
+	</tr>
+</tbody></table>
 <style>
 	#canvas
 	{
 		border-style: solid;
+	}
+
+	button
+	{
+		background-color: #4fd970;
+		border-style: none;
+		color: #000000;
+		cursor: pointer;
+		font: inherit;
+		font-size: 2ch;
+		margin: 0;
+		outline: inherit;
+		padding: 1ch;
+		text-align: center;
+	}
+
+	button:active
+	{
+		color: #ffffff;
+	}
+
+	table
+	{
+		margin: 0 auto;
 	}
 </style>
 <script>
