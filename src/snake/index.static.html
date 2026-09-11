@@ -4,8 +4,8 @@
 	too much free time and wanted to test my sanity.
 </p>
 <p>
-	The controls are the arrow keys. If you are on mobile or don't have a
-	keyboard, I'm sorry for you.
+	The snake is controlled by the WASD keys. If you are on mobile or
+	don't have a keyboard, I'm sorry for you.
 </p>
 <noscript><p>
 	If you can't see the game down here, it probably means that you have
@@ -185,20 +185,20 @@ function update() {
 	updating = false;
 }
 
-/* Update snake head direction when arrow keys are pressed. Do not change
-   the direction if the chosen one is the opposite of the current one. */
+/* Update snake head direction when WASD keys are pressed. Do not change the
+   direction if the chosen one is the opposite of the current one. */
 document.onkeydown = e => {
 	if (updating)
 		return;
 
-	if (e.keyCode === 37 && direction != 1)
-		chosen_direction = 3; /* Left */
-	else if (e.keyCode === 38 && direction != 2)
-		chosen_direction = 0; /* Up */
-	else if (e.keyCode === 39 && direction != 3)
-		chosen_direction = 1; /* Right */
-	else if (e.keyCode === 40 && direction != 0)
-		chosen_direction = 2; /* Down */
+	if (e.keyCode === 65 && direction != 1)
+		chosen_direction = 3; /* A: Left */
+	else if (e.keyCode === 87 && direction != 2)
+		chosen_direction = 0; /* W: Up */
+	else if (e.keyCode === 68 && direction != 3)
+		chosen_direction = 1; /* D: Right */
+	else if (e.keyCode === 83 && direction != 0)
+		chosen_direction = 2; /* S: Down */
 }
 
 update_interval = setInterval(update, 200);
