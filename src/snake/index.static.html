@@ -148,7 +148,7 @@ function random_free_pixel() {
 			Math.floor(Math.random() * WIDTH),
 			Math.floor(Math.random() * HEIGHT),
 		];
-	while (snake.some(([x, y, direction]) => x === p[0] && y === p[1]))
+	while (snake.some(([x, y]) => x === p[0] && y === p[1]))
 
 	return p;
 }
@@ -198,7 +198,7 @@ function update() {
 	}
 
 	/* Snake body, excluding the tail. */
-	for (const [x, y, direction] of snake.slice(0, -1)) {
+	for (const [x, y] of snake.slice(0, -1)) {
 		if (head_pointed[0] === x && head_pointed[1] === y) {
 			lose();
 			return;
