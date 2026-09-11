@@ -12,6 +12,12 @@
 	JavaScript disabled. Do yourself a favour and keep it like that ^^.
 </p></noscript>
 <p id="canvas-p"><canvas id="canvas"></canvas></p>
+<style>
+	#canvas
+	{
+		border-style: solid;
+	}
+</style>
 <script>
 /* ID given by setInterval. */
 let update_interval = null;
@@ -22,8 +28,6 @@ const HEIGHT = 20;
 
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-
-canvas.style.borderStyle = "solid";
 
 /* Whether the update function is running. */
 updating = false;
