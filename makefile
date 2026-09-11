@@ -16,6 +16,7 @@ ICONS = assets/icon/8.png \
 OUTS = 404.html \
        index.html \
        la-tela-di-penelope/index.html \
+       programming-smaller-projects/index.html \
 
 STATICOUTS = snake/index.html \
 

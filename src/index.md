@@ -1,23 +1,26 @@
 Fran
 ====
 
-Music
------
-
-- [La tela di Penelope](./la-tela-di-penelope/): A soundtrack I composed and
-  recorded for a school project.
+Hi! ^^
 
 Programming
 -----------
 
+Here are the main projects I work on:
+
 - [Op](https://github.com/fransac/op): An attempt at making a microkernel
   operating system.
-- [Pack](https://github.com/fransac/pack): A simple POSIX package manager.
-- [Secret](https://github.com/fransac/secret): A POSIX utility to handle secrets
-  using age encryption.
-- [Site](https://github.com/fransac/site): This website's code.
-- [Typ](https://github.com/fransac/typ): An original typeface, and also the one
-  used in this website.
+- [Site](https://github.com/fransac/site): This website.
+
+I made some [smaller projects](./programming-smaller-projects) too.
+
+Music
+-----
+
+It may sometimes happen that I make some music:
+
+- [La tela di Penelope](./la-tela-di-penelope/): A soundtrack I composed and
+  recorded for a school project.
 
 Links
 -----
