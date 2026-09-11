@@ -24,6 +24,7 @@ body
 	background-color: #000000;
 	color: #ffffff;
 	font-family: "Typ", monospace;
+	hyphens: auto;
 	line-height: 1;
 	margin: 0 auto;
 	max-width: calc(100% - 2ch); /* Considering double padding. */
