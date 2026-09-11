@@ -17,7 +17,7 @@ OUTS = 404.html \
        index.html \
        la-tela-di-penelope/index.html \
 
-STATICOUTS = snake/index.html
+STATICOUTS = snake/index.html \
 
 .PHONY: all clean install uninstall
 
