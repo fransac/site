@@ -6,6 +6,12 @@
 	font-family: "Typ";
 }
 
+@font-face
+{
+	src: url("/assets/fonts/typ-tiny.ttf");
+	font-family: "Typ Tiny";
+}
+
 /* Base. */
 
 html
@@ -120,6 +126,13 @@ a
 {
 	color: #4fd970;
 	text-decoration: none;
+}
+
+em
+{
+	font-family: "Typ Tiny", monospace;
+	font-size: calc(1em * (4 / 6)); /* Typ Tiny is 4x4, while Typ is 6x6. */
+	font-style: normal;
 }
 
 /* Do not style imgs in header and footer. */
