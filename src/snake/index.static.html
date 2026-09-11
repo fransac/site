@@ -48,6 +48,18 @@ let chosen_direction = 1;
    update. */
 let direction = 1;
 
+/* Sets chosen_direction to the given direction if it is not the opposite of the
+   current direction and if update is not running. */
+function choose_direction(new_direction) {
+	if (updating)
+		return;
+
+	/* The opposite direction pairs are (0, 2) and (1, 3). The check is as
+	   easy as checking if their difference is 2. */
+	if (Math.abs(new_direction - direction) != 2)
+		chosen_direction = new_direction;
+}
+
 /* Draw pixel with a specific hex color string. If color is null, the pixel is
    instead erased. The coordinates are 0-based. */
 function draw_pixel(x, y, color) {
@@ -192,17 +204,22 @@ function update() {
 /* Update snake head direction when WASD keys are pressed. Do not change the
    direction if the chosen one is the opposite of the current one. */
 document.onkeydown = e => {
-	if (updating)
-		return;
-
-	if (e.keyCode === 65 && direction != 1)
-		chosen_direction = 3; /* A: Left */
-	else if (e.keyCode === 87 && direction != 2)
-		chosen_direction = 0; /* W: Up */
-	else if (e.keyCode === 68 && direction != 3)
-		chosen_direction = 1; /* D: Right */
-	else if (e.keyCode === 83 && direction != 0)
-		chosen_direction = 2; /* S: Down */
+	switch (e.keyCode) {
+		case 87: /* W: up. */
+			choose_direction(0);
+			break;
+		case 68: /* D: right. */
+			choose_direction(1);
+			break;
+		case 83: /* S: down. */
+			choose_direction(2);
+			break;
+		case 65: /* A: left. */
+			choose_direction(3);
+			break;
+		default:
+			break;
+	}
 }
 
 update_interval = setInterval(update, 200);
