@@ -87,13 +87,6 @@ pre
 	overflow-x: scroll
 }
 
-pre::before
-{
-	content: "CODE";
-	display: block;
-	margin-bottom: 1ch;
-}
-
 ol,
 ul
 {
