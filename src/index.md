@@ -6,13 +6,9 @@ Hi! ^^
 Programming
 -----------
 
-Here are the main projects I work on:
-
-- [Op](https://github.com/fransac/op): An attempt at making a microkernel
-  operating system.
-- [Site](https://github.com/fransac/site): This website.
-
-I made some [smaller projects](./programming-smaller-projects) too.
+My main project is [Op](https://github.com/fransac/op), an attempt at building a
+microkernel operating system. I made some
+[smaller projects](./programming-smaller-projects) too.
 
 Music
 -----
