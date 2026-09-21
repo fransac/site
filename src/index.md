@@ -21,5 +21,5 @@ It may sometimes happen that I make some music:
 Links
 -----
 
-- [EMAIL](mailto:site&#64;fran&#46;one)
-- [GITHUB](https://github.com/fransac)
+- [Email](mailto:site&#64;fran&#46;one)
+- [GitHub](https://github.com/fransac)
