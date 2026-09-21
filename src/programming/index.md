@@ -9,5 +9,4 @@ These are side experiments I made in my free time:
 - [Site](https://github.com/fransac/site): This website.
 - [Snake](/snake): A simple snake implementation in JavaScript; its entire code
   is embedded in the webpage.
-- [Typ](https://github.com/fransac/typ): An original pixel typeface; it is the
-  one used by this website.
+- [Typ](https://github.com/fransac/typ): An original pixel typeface.
