@@ -1,5 +1,5 @@
-Programming: Smaller Projects
-=============================
+Programming
+===========
 
 These are side experiments I made in my free time:
 

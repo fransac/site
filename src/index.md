@@ -7,8 +7,7 @@ Programming
 -----------
 
 My main project is [Op](https://github.com/fransac/op), an attempt at building a
-microkernel operating system. I made some
-[smaller projects](./programming-smaller-projects) too.
+microkernel operating system. I made some [smaller projects](./programming) too.
 
 Music
 -----
