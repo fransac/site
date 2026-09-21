@@ -14,7 +14,7 @@ body
 	line-height: 1;
 	margin: 0 auto;
 	max-width: calc(100% - 2ch); /* Considering double padding. */
-	width: 32ch;
+	width: 48ch;
 	overflow-wrap: break-word;
 	padding: 0 1ch;
 }
@@ -22,7 +22,7 @@ body
 *
 {
 	border-color: #808080;
-	border-width: calc(1ch / 6); /* 1 pixel of the 6x6 font. */
+	border-width: 0.2ch;
 	color: inherit;
 	font-family: inherit;
 	font-size: inherit;
@@ -59,7 +59,7 @@ blockquote,
 pre
 {
 	border-left-style: solid;
-	padding: 0 0 0 calc(1ch - (1ch / 6)); /* Considering border width. */
+	padding: 0.2ch 0 0.2ch 0.8ch; /* Considering border width. */
 }
 
 pre
@@ -107,9 +107,8 @@ a
 main img
 {
 	border-style: solid;
-	max-width: calc(100% - (2 * 1ch)); /* Considering double padding. */
+	max-width: calc(100% - 2ch); /* Considering double padding. */
 	padding: 1ch;
-	width: 24ch;
 }
 
 /* Specific. */
@@ -125,5 +124,5 @@ header img
 {
 	image-rendering: crisp-edges;
 	transform: scaleY(-1);
-	width: calc(8ch / 6); /* Match pixel size with the 6x6 font. */
+	width: 2ch;
 }
