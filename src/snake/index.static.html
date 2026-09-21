@@ -17,7 +17,7 @@
 		<th>
 			<button onclick="(() => {
 				choose_direction(0);
-			})()">^</button>
+			})()"></button>
 		</th>
 		<th></th>
 	</tr>
@@ -25,17 +25,17 @@
 		<th>
 			<button onclick="(() => {
 				choose_direction(3);
-			})()">&lt;</button>
+			})()"></button>
 		</th>
 		<th>
 			<button onclick="(() => {
 				choose_direction(2);
-			})()">v</button>
+			})()"></button>
 		</th>
 		<th>
 			<button onclick="(() => {
 				choose_direction(1);
-			})()">&gt;</button>
+			})()"></button>
 		</th>
 	</tr>
 </tbody></table>
@@ -45,27 +45,33 @@
 		border-style: solid;
 	}
 
+	table
+	{
+		margin: 0 auto;
+	}
+
+	th
+	{
+
+		height: 4ch;
+		width: 4ch;
+	}
+
 	button
 	{
 		background-color: #4fd970;
 		border-style: none;
 		color: #000000;
 		cursor: pointer;
-		font: inherit;
+		height: 100%;
 		margin: 0;
 		outline: inherit;
-		padding: 1ch;
-		text-align: center;
+		width: 100%;
 	}
 
 	button:focus:active
 	{
-		color: #ffffff;
-	}
-
-	table
-	{
-		margin: 0 auto;
+		background-color: #ffffff;
 	}
 </style>
 <script>
