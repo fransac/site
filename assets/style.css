@@ -1,17 +1,3 @@
-/* Fonts. */
-
-@font-face
-{
-	src: url("/assets/fonts/typ.ttf");
-	font-family: "Typ";
-}
-
-@font-face
-{
-	src: url("/assets/fonts/typ-tiny.ttf");
-	font-family: "Typ Tiny";
-}
-
 /* Base. */
 
 html
@@ -23,7 +9,7 @@ body
 {
 	background-color: #000000;
 	color: #ffffff;
-	font-family: "Typ", monospace;
+	font-family: monospace;
 	hyphens: auto;
 	line-height: 1;
 	margin: 0 auto;
@@ -115,13 +101,6 @@ a
 {
 	color: #4fd970;
 	text-decoration: none;
-}
-
-em
-{
-	font-family: "Typ Tiny", monospace;
-	font-size: calc(1em * (4 / 6)); /* Typ Tiny is 4x4, while Typ is 6x6. */
-	font-style: normal;
 }
 
 /* Do not style imgs in header and footer. */
