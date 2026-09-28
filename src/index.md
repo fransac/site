@@ -16,9 +16,3 @@ It may sometimes happen that I make some music:
 
 - [La tela di Penelope](./la-tela-di-penelope/): A soundtrack I composed and
   recorded for a school project.
-
-Links
------
-
-- [Email](mailto:site&#64;fran&#46;one)
-- [GitHub](https://github.com/fransac)
