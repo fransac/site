@@ -24,7 +24,8 @@ Structure
 
 The <assets> directory is copied to ROOT as is.
 
-The <src> directory contains each page's Markdown file.
+The <src> directory contains each page's Markdown (.md) or HTML (.static.html)
+file.
 
 The <template> directory contains files that are used to generate the full HTML
 document of each page.
