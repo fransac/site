@@ -6,7 +6,6 @@ A personal website.
 Requirements
 ------------
 
-- ImageMagick (magick).
 - A CLI Markdown-to-HTML converter (md2html).
 
 Installation
@@ -22,7 +21,7 @@ files to ROOT.
 Structure
 ---------
 
-The <assets> directory is copied to ROOT as is.
+The <assets> directory and the <favicon.ico> file are copied to ROOT as is.
 
 The <src> directory contains each page's Markdown (.md) or HTML (.static.html)
 file.

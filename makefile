@@ -3,15 +3,7 @@ include config.mk
 ASSETS = assets
 SRC = src
 TEMPLATE = template
-ICONS = assets/icon/8.png \
-        assets/icon/16.png \
-        assets/icon/24.png \
-        assets/icon/32.png \
-        assets/icon/48.png \
-        assets/icon/64.png \
-        assets/icon/128.png \
-        assets/icon/256.png \
-        assets/icon/512.png \
+FAVICON = favicon.ico
 
 OUTS = 404.html \
        index.html \
@@ -38,9 +30,7 @@ install: all
 	done
 
 	mkdir -p $$(dirname $(DESTDIR)$(ROOT)/$(ASSETS))
-	cp -rf $(ASSETS) $(DESTDIR)$(ROOT)/$(ASSETS)
-
-	$(MAGICK) $(ICONS) $(DESTDIR)$(ROOT)/favicon.ico
+	cp -rf $(ASSETS) $(FAVICON) $(DESTDIR)$(ROOT)
 
 uninstall:
 	for o in $(OUTS) $(STATICOUTS); \
@@ -48,8 +38,7 @@ uninstall:
 		rm -rf "$(DESTDIR)$(ROOT)/$$o"; \
 	done
 
-	rm -rf $(DESTDIR)$(ROOT)/$(ASSETS)
-	rm -f $(DESTDIR)$(ROOT)/favicon.ico
+	rm -rf $(DESTDIR)$(ROOT)/$(ASSETS) $(DESTDIR)$(ROOT)/$(FAVICON)
 
 $(OUTS):
 	cat $(TEMPLATE)/header.html > $(SRC)/$@
