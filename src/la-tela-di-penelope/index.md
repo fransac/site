@@ -1,6 +1,8 @@
 La tela di Penelope
 ===================
 
+This is a soundtrack I composed for a school project.
+
 - [Eco](/assets/music/la-tela-di-penelope/eco.ogg)
 - [Eredita`](/assets/music/la-tela-di-penelope/eredita.ogg)
 - [Nessuno](/assets/music/la-tela-di-penelope/nessuno.ogg)
