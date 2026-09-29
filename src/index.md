@@ -1,7 +1,7 @@
 Fran
 ====
 
-Hi! I am a computer engineering student mainly interested in OS development and
+Hi! I'm a computer engineering student mainly interested in OS development and
 [minimalist computing](https://suckless.org/philosophy/). I'm also a music
 enthusiast. ^^
 
@@ -16,5 +16,4 @@ Music
 
 I occasionally make music, too!
 
-- [La tela di Penelope](./la-tela-di-penelope/): A soundtrack I composed and
-  recorded for a school project.
+- [La tela di Penelope](./la-tela-di-penelope/)
