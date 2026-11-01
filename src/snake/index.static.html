@@ -50,18 +50,17 @@
 
 	button
 	{
-		background-color: #4fd970;
+		background-color: #ffffff;
 		border: none;
 		cursor: pointer;
 		height: 100%;
 		margin: 0;
-		outline: #ffffff;
 		width: 100%;
 	}
 
-	button:focus:active
+	button:active
 	{
-		background-color: inherit;
+		background-color: #808080;
 	}
 </style>
 <script>
@@ -236,7 +235,7 @@ function update() {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 	/* Draw apple. */
-	draw_pixel(apple[0], apple[1], "#4fd970");
+	draw_pixel(apple[0], apple[1], "#808080");
 
 	/* Draw snake. */
 	for (const [x, y] of snake)
