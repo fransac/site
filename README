@@ -21,7 +21,7 @@ files to ROOT.
 Structure
 ---------
 
-The <assets> directory and the <favicon.ico> file are copied to ROOT as is.
+The <assets> directory is copied to ROOT as is.
 
 The <src> directory contains each page's Markdown (.md) or HTML (.static.html)
 file.
