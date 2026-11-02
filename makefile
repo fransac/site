@@ -6,7 +6,6 @@ TEMPLATE = template
 
 OUTS = 404.html \
        index.html \
-       la-tela-di-penelope/index.html \
 
 .PHONY: all clean install uninstall
 
