@@ -4,7 +4,8 @@ Fran
 Programming
 -----------
 
-- [Op](https://github.com/fransac/op): An attempt at building an operating system.
+- [Op](https://github.com/fransac/op): An attempt at building an operating
+  system.
 - [Pack](https://github.com/fransac/pack): A simple POSIX package manager.
 - [Secret](https://github.com/fransac/secret): A POSIX utility to handle secrets
   using [age encryption](https://age-encryption.org/).
