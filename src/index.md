@@ -22,3 +22,11 @@ Music
 - [Vocazione](/assets/music/vocazione.ogg)
 - [Orizzonte](/assets/music/orizzonte.ogg)
 - [Scia](/assets/music/scia.ogg)
+
+Interesting sites
+-----------------
+
+- <https://joearms.github.io/published/2014-06-25-minimal-viable-program.html>
+- <https://suckless.org/philosophy/>
+- <https://suckless.org/rocks/>
+- <https://wayland.fyi/>
