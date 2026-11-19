@@ -27,6 +27,7 @@ Interesting sites
 -----------------
 
 - <https://joearms.github.io/published/2014-06-25-minimal-viable-program.html>
+- <https://lukesmith.xyz/articles/consciousness/>
 - <https://suckless.org/philosophy/>
 - <https://suckless.org/rocks/>
 - <https://wayland.fyi/>
