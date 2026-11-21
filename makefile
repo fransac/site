@@ -20,11 +20,11 @@ clean:
 install: all
 	for o in $(OUTS); \
 	do \
-		mkdir -p $$(dirname "$(DESTDIR)$(ROOT)/$$o"); \
+		mkdir -p `dirname "$(DESTDIR)$(ROOT)/$$o"`; \
 		cp -rf "$(SRC)/$$o" "$(DESTDIR)$(ROOT)/$$o"; \
 	done
 
-	mkdir -p $$(dirname $(DESTDIR)$(ROOT)/$(ASSETS))
+	mkdir -p `dirname $(DESTDIR)$(ROOT)/$(ASSETS)`
 	cp -rf $(ASSETS) $(DESTDIR)$(ROOT)
 
 uninstall:
