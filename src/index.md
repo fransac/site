@@ -22,6 +22,7 @@ Music
 Interesting sites
 -----------------
 
+- [Bill Wurtz](https://billwurtz.com/)
 - [Minimal viable program](https://joearms.github.io/published/2014-06-25-minimal-viable-program.html)
 - [Luke Smith's take on consciousness](https://lukesmith.xyz/articles/consciousness/)
 - [Suckless philsophy](https://suckless.org/philosophy/)
