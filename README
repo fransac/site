@@ -6,7 +6,7 @@ A personal website.
 Requirements
 ------------
 
-- A CLI Markdown-to-HTML converter (md2html).
+- md2html(1)
 
 Installation
 ------------
