@@ -22,8 +22,8 @@ Music
 Interesting sites
 -----------------
 
-- <https://joearms.github.io/published/2014-06-25-minimal-viable-program.html>
-- <https://lukesmith.xyz/articles/consciousness/>
-- <https://suckless.org/philosophy/>
-- <https://suckless.org/rocks/>
-- <https://wayland.fyi/>
+- [Minimal viable program](https://joearms.github.io/published/2014-06-25-minimal-viable-program.html)
+- [Luke Smith's take on consciousness](https://lukesmith.xyz/articles/consciousness/)
+- [Suckless philsophy](https://suckless.org/philosophy/)
+- [Suckless software](https://suckless.org/rocks/)
+- [Wayland special interest group](https://wayland.fyi/)
