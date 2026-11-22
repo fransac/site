@@ -11,12 +11,10 @@ Requirements
 Installation
 ------------
 
-Modify <config.mk> as needed.
+The default ROOT, i.e. the installation directory, is "/srv/http".
 
-The following command builds the website in-source and installs the website's
-files to ROOT.
-
-	$ make install
+	$ make
+	# make [ROOT=rootdir] install
 
 Structure
 ---------
