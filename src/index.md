@@ -11,7 +11,7 @@ Music
 -----
 
 - [Eco](/assets/music/eco.ogg)
-- [Eredita`](/assets/music/eredita.ogg)
+- [Eredità](/assets/music/eredita.ogg)
 - [Nessuno](/assets/music/nessuno.ogg)
 - [Veglia](/assets/music/veglia.ogg)
 - [Dubbi](/assets/music/dubbi.ogg)
